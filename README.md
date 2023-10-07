@@ -8,3 +8,5 @@ Users of the command-line notebook application need to be able to :
 4. Modify notes by ID
 5. Modify tags
 6. Store notes in a notebook
+
+[]!(https://github.com/noor188/Command-line-notebook-application/blob/main/img/Notebook_Application.png)
