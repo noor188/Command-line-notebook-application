@@ -24,6 +24,8 @@ class Note:
         Search is case sensitive and matches both text and tags'''
         return filter in self.memo or filter in self.tags
     
+
+
     
 
 
