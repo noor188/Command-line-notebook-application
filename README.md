@@ -3,12 +3,11 @@ A command line notebook that stores notes (short memos)
 
 # Analysis
 Users of the command-line notebook application need to be able to :
-1. Add notes
-2. Add tages to notes
-3. Search notes
-4. Modify notes by ID
-5. Modify tags
-6. Store notes in a notebook
+1. Create notes/tags.
+2. Search notes
+3. Modify notes by ID
+4. Modify tags
+5. Store notes in a notebook
 
 --------------------------------------------------------------------------------------------
 
