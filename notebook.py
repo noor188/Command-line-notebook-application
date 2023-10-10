@@ -25,9 +25,9 @@ class Notebook:
         return None
     
     def modifyMemo(self, noteId, memo):
-        '''Find the note with the given id and change its memo to the given value'''
+        '''Find the note with the given id and change its memo to the given value.'''
         self._findNote(noteId).memo = memo
     
     def modifyTags(self, noteId, tags):
-        '''Find the note with the given id and change its tag to the given tags'''
+        '''Find the note with the given id and change its tag to the given tags.'''
         self._findNote(noteId).tags = tags
