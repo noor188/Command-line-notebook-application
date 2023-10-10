@@ -12,7 +12,7 @@ Users of the command-line notebook application need to be able to :
 --------------------------------------------------------------------------------------------
 
 # Design
-![](https://github.com/noor188/Command-line-notebook-application/blob/main/img/Notebook_Application.png)
+![](https://github.com/noor188/Command-line-notebook-application/blob/main/img/OOD.png)
 
 --------------------------------------------------------------------------------------------
 
