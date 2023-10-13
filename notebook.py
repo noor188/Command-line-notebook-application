@@ -26,8 +26,16 @@ class Notebook:
     
     def modifyMemo(self, noteId, memo):
         '''Find the note with the given id and change its memo to the given value.'''
-        self._findNote(noteId).memo = memo
+        note = self._findNote(noteId)
+        if note:
+            note.memo = memo 
+        else:
+            print('memo does not exits')
     
     def modifyTags(self, noteId, tags):
         '''Find the note with the given id and change its tag to the given tags.'''
-        self._findNote(noteId).tags = tags
+        note = self._findNote(noteId)
+        if note :
+            note.tags = tags
+        else:
+            print('memo does not exits')
