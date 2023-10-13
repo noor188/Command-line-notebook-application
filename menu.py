@@ -1,3 +1,4 @@
+import sys
 from note import Note
 from notebook import Notebook
 
@@ -41,4 +42,31 @@ class Menu:
         for note in notes:
             print('{0}: {1}\n{2}'.format(note.id, note.tags, note.memo))    
     
+    def searchNotes(self):
+        filter = input('Search for: ')
+        notes = self.notebook.search(filter)
+        self.show_notes(notes)
+
+    def addNote(self):
+        memo = input('Enter a memo: ')
+        self.notebook.newNote(memo)
+        print('Your note has been added')
+    
+    def modifyNote(self):
+        id = input("Enter a note id: ")
+        memo = input("Enter a memo: ")
+        tags = input('Enter tags: ')
+        if memo :
+            self.notebook.modifyMemo(id, memo)
+        if tags:
+            self.notebook.modifyTags(id, tags)
+        
+    def quit(self):
+        print('Thank you for using your notebook today.')
+        sys.exit(0)
+
+if __name__ == '__main__':
+    Menu().run()    
+
+
 
