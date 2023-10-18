@@ -19,9 +19,9 @@ Users of the command-line notebook application need to be able to :
 # Folder Structure
 
 parent_directory/ <br /> 
-  notebook.py  <br />
-  menu.py  <br />
-  command_option.py<br />
+&ensp;notebook.py  <br />
+&ensp;menu.py  <br />
+&ensp;command_option.py<br />
 
 --------------------------------------------------------------------------------------------
 
