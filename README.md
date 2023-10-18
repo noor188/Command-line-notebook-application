@@ -18,10 +18,10 @@ Users of the command-line notebook application need to be able to :
 
 # Folder Structure
 
-parent_directory/  
-  notebook.py  
-  menu.py  
-  command_option.py
+parent_directory/ <br /> 
+  notebook.py  <br />
+  menu.py  <br />
+  command_option.py<br />
 
 --------------------------------------------------------------------------------------------
 
