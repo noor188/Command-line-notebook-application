@@ -8,9 +8,9 @@ class Menu:
         self.notebook = Notebook()
         self.choices = {
             '1': self.show_notes,
-            '2': self.search_notes,
-            '3': self.add_note,
-            '4': self.modify_note,
+            '2': self.searchNotes,
+            '3': self.addNote,
+            '4': self.modifyNote,
             '5': self.quit
         }
     
@@ -44,13 +44,19 @@ class Menu:
     
     def searchNotes(self):
         filter = input('Search for: ')
-        notes = self.notebook.search(filter)
-        self.show_notes(notes)
+        if filter:
+            notes = self.notebook.search(filter)
+            self.show_notes(notes)
+        else:
+            print('You did not enter a keyword, try again an enter a keyword')
 
     def addNote(self):
         memo = input('Enter a memo: ')
-        self.notebook.newNote(memo)
-        print('Your note has been added')
+        if memo:
+            self.notebook.newNote(memo)
+            print('Your note has been added')
+        else:
+            print('You did not enter a memo, try again an type a memo text')
     
     def modifyNote(self):
         id = input("Enter a note id: ")
