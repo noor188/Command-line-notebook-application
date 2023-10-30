@@ -16,7 +16,7 @@ class Menu:
     
     def displayMenu(self):
         print("""
-                Notebook Menu
+            Notebook Menu
               
               1. Show all Notes
               2. Search Notes
@@ -63,9 +63,11 @@ class Menu:
         memo = input("Enter a memo: ")
         tags = input('Enter tags: ')
         if memo :
-            self.notebook.modifyMemo(id, memo)
+            if not self.notebook.modifyMemo(id, memo):
+                print('You entered an invalid Id')
         if tags:
-            self.notebook.modifyTags(id, tags)
+            if not self.notebook.modifyTags(id, tags):
+                print('You entered an invalid Id')
         
     def quit(self):
         print('Thank you for using your notebook today.')

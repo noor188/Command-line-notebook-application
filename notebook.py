@@ -18,24 +18,24 @@ class Notebook:
         self.notes.append(note.Note(memo,tags))
 
     def _findNote(self, noteId):
-        '''Locate the note with the given id.'''
+        '''Locate the note with the given id.'''        
         for note in self.notes:
-            if note.id == noteId:
+            if str(note.id) == str(noteId):
                 return note
-        return None
+        return None        
     
     def modifyMemo(self, noteId, memo):
         '''Find the note with the given id and change its memo to the given value.'''
         note = self._findNote(noteId)
         if note:
             note.memo = memo 
-        else:
-            print('memo does not exits')
+            return True
+        return False
     
     def modifyTags(self, noteId, tags):
         '''Find the note with the given id and change its tag to the given tags.'''
         note = self._findNote(noteId)
         if note :
             note.tags = tags
-        else:
-            print('memo does not exits')
+            return True
+        return False
