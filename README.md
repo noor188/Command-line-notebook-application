@@ -5,8 +5,7 @@ A command line notebook that stores notes (short memos)
 Users of the command-line notebook application need to be able to :
 1. Create notes/tags.
 2. Search notes
-3. Modify notes by ID
-4. Modify tags by ID
+3. Modify notes/tags by ID
 
 
 --------------------------------------------------------------------------------------------
