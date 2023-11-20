@@ -1,5 +1,4 @@
-
-import note
+from note import Note
 
 class Notebook:
     '''Represents a collection of notes that can be tagged,
@@ -13,10 +12,10 @@ class Notebook:
         '''Find all notes that match the given filter string.'''
         return [noteMemo for noteMemo in self.notes if noteMemo.match(filter)]
 
-    def newNote(self, memo, tags =''):
-        '''Create a new note and add it ti the list.'''
-        self.notes.append(note.Note(memo,tags))
-
+    def newNote(self, **kwargs):
+        '''Create a new note and add it to the list.'''
+        self.notes.append(Note(**kwargs))
+       
     def _findNote(self, noteId):
         '''Locate the note with the given id.'''        
         for note in self.notes:
