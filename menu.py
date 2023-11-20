@@ -8,7 +8,7 @@ class Menu:
     def __init__(self):
         self.notebook = Notebook()
         self.choices = {
-            '1': self.show_notes,
+            '1': self.showNotes,
             '2': self.searchNotes,
             '3': self.addNote,
             '4': self.modifyNote,
@@ -37,7 +37,7 @@ class Menu:
             else:
                 print('{0} is not a valid choice'.format(choice))
 
-    def show_notes(self, notes= None):
+    def showNotes(self, notes= None):
         if not notes:
             notes = self.notebook.notes
         for note in notes:
