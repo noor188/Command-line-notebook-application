@@ -1,6 +1,7 @@
 import sys
 from note import Note
 from notebook import Notebook
+from validation import getValidInput
 
 class Menu:
     '''Display a menu and respond to choices when run.'''
@@ -29,7 +30,7 @@ class Menu:
         '''Display the menu and respond to choices.'''
         while True:
             self.displayMenu()
-            choice = input('Enter an option: ')
+            choice = getValidInput('Enter an option: ', self.choices.keys())
             action = self.choices.get(choice)
             if action :
                 action()
@@ -50,14 +51,14 @@ class Menu:
         else:
             print('You did not enter a keyword, try again an enter a keyword')
 
-    def addNote(self):
-        memo = input('Enter a memo: ')
-        if memo:
-            self.notebook.newNote(memo)
+    def addNote(self):        
+        initArgs = Note.promptInit()
+        if initArgs['memo']:
+            self.notebook.newNote(**initArgs)
             print('Your note has been added')
         else:
             print('You did not enter a memo, try again an type a memo text')
-    
+                
     def modifyNote(self):
         id = input("Enter a note id: ")
         memo = input("Enter a memo: ")

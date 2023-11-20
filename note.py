@@ -24,6 +24,17 @@ class Note:
         Search is case sensitive and matches both text and tags'''
         return filter in self.memo or filter in self.tags
     
+    def promptInit():
+        '''Use Python dict construcotr to create a dictionary of values that can be passesd into __init__.
+        The value for each key is prompted with a call to input.'''
+        return dict(
+            memo = input('Enter memo: '),
+            tags = input('Enter tags: ')
+        )
+
+    promptInit = staticmethod(promptInit)
+    
+
 
 
     
